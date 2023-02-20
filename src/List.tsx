@@ -14,13 +14,16 @@ export const List =({todos, handleStatus, removeTodo}: Props)=> {
 	}
 
 	return (
-		<div>
+		<div className='grid grid-cols-4 gap-4 m-10'>
 			{todos.map((todo, id) => {
 				return (
-					<div key={id} style={{border: 'black 1px solid'}}>
-						<p>{todo.task}</p>
-						<input type='checkbox' checked={todo.status} onChange={() => checkUncheck(id)}/>
-						<button onClick={() => removeTodo(id)}>Supprimer</button>
+					<div key={id} className="bg-amber-100 h-28 border-solid border-2 border-dark-500 flex flex-col justify-center">
+						<p className="text-1xl font-bold">{todo.task}</p>
+						<div className='flex justify-evenly'>
+							<input className='' type='checkbox' checked={todo.status} onChange={() => checkUncheck(id)}/>
+							<button onClick={() => removeTodo(id)}>Supprimer</button>
+						</div>
+						
 					</div>
 				)
 			})}

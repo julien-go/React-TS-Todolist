@@ -2,6 +2,7 @@ import { useState, useEffect} from 'react'
 import { AddTodo } from './AddTodo'
 import { List } from './List'
 import type { TodoType, TodoListType } from './@types/todo'
+import './index.css'
 
 function App() {
 
@@ -30,7 +31,7 @@ function App() {
   })
   
   return (
-        <div className="App">
+        <div className="App mr-10 ml-10">
           <h1>Todolist React Typescript</h1>
           <AddTodo addTodo={addTodo}/>
           <List todos={todos} handleStatus={handleStatus} removeTodo={removeTodo}/>

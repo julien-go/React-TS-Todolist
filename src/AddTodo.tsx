@@ -15,8 +15,11 @@ export const AddTodo =({addTodo}: Props)=> {
   
 	const submit = (e: React.FormEvent<HTMLFormElement>) => {
 		e.preventDefault()
-	  	addTodo(newTodo)
-	  	setNewTodo('')
+		if(newTodo !== ''){
+			addTodo(newTodo)
+	  		setNewTodo('')
+		}
+	  	
 	  }
 
 	return (
