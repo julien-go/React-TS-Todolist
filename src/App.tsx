@@ -25,14 +25,12 @@ function App() {
     })
     setTodos(newArray)
   }
-
-  useEffect(()=> {
-    console.log(todos)
-  })
   
   return (
         <div className="App mr-10 ml-10">
-          <h1>Todolist React Typescript</h1>
+          <header className='header sticky top-0 bg-white shadow-md flex items-center justify-center p-10'>
+            <h1 className='text-5xl bold'>Todolist React Typescript</h1>
+          </header> 
           <AddTodo addTodo={addTodo}/>
           <List todos={todos} handleStatus={handleStatus} removeTodo={removeTodo}/>
         </div>
