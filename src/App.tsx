@@ -9,7 +9,7 @@ function App() {
   const [todos, setTodos] = useState<TodoListType>([])
 
   const addTodo = (newTodo: string) => {
-    setTodos([...todos, {task: newTodo, status: false}])
+    setTodos([...todos, {id: todos.length, task: newTodo, status: false}])
   }
   const removeTodo = (id: number) => {
     setTodos(todos.filter((element, index) => index !== id))
