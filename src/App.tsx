@@ -29,7 +29,7 @@ function App() {
   return (
         <div className="App mr-10 ml-10">
           <header className='header sticky top-0 bg-white shadow-md flex items-center justify-center p-10'>
-            <h1 className='text-5xl bold'>Todolist React Typescript</h1>
+            <h1 className='font-sans text-5xl font-bold font-custom'>Todolist React Typescript</h1>
           </header> 
           <AddTodo addTodo={addTodo}/>
           <List todos={todos} handleStatus={handleStatus} removeTodo={removeTodo}/>
